@@ -1,0 +1,14 @@
+application:
+  name: eureka #这个不变，都是eureka
+
+server:
+  port: 8380 #各自的端口
+
+eureka:
+  instance:
+    hostname: eureka3.com # 各自的域名
+  client:
+    fetch-registry: false # 禁止到Eureka器中获取注册信息
+    register-with-eureka: false # 禁止将自己作为客户端注册信息到Eureka服务器
+    serviceUrl:
+      defaultZone: http://eureka0.com:8080/eureka/,http://eureka2.com:8280/eureka/ # 除了自己的，都包含进去
