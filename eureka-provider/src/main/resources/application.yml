@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: eureka-provider
+
+server:
+    port: 8081
+
+eureka:
+  instance:
+    hostname: 127.0.0.1 #对应页面上的DS Replicas，服务端的域名
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8080/eureka/ # 服务的注册网址
